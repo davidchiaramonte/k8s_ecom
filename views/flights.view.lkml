@@ -52,6 +52,16 @@ view: flights {
   dimension: destination {
     type: string
     sql: ${TABLE}.destination ;;
+    link: {
+      label: "Airport Information"
+      url: "https://www.google.com/search?q={{ value }}+airport"
+      icon_url: "https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+    }
+    link: {
+      label: "Airport Location"
+      url: "https://www.google.com/maps?q={{ value }}+airport"
+      icon_url: "https://cdn.vox-cdn.com/thumbor/Sk0PlZgKCM6p3YS_4sMW2h6xVlQ=/1400x1050/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/19700731/googlemaps.png"
+    }
   }
 
   dimension: distance {
